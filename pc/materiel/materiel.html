@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>集中采购</title>
+    <link rel="stylesheet" href="css/user_center.css">
+    <link rel="stylesheet" href="css/materiel.css">
+</head>
+<body>
+    <div class="mat-header">
+        <p class="w-1200">您现在的位置：<a href="">物料服务</a>&gt;<span>物料集中展销</span></p>
+    </div>
+    <div class="mat-banner">
+        <img src="pic/mat-banner.jpg" alt="">
+    </div>
+    <div class="mat-con">
+        <div class="w-1200">
+            <form action="">
+
+                <div class="mat-con-c1">
+                    <div class="mat-con-hd">
+                        <h3>采购需求</h3><span>请填写你的采购需求，如果还有更多需求，可以新增</span>
+                    </div>
+                    <table width="998" id="mat_table">
+                        <thead>
+                        <tr>
+                            <th>钢种</th>
+                            <th>规格</th>
+                            <th>数量</th>
+                            <th>钢厂</th>
+                            <th>备注</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>20rMnTiH</td>
+                            <td>150</td>
+                            <td>2000</td>
+                            <td>杭钢</td>
+                            <td><span>备注</span></td>
+                            <td><a href="javascript:void(0);">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>20rMnTiH</td>
+                            <td>150</td>
+                            <td>2000</td>
+                            <td>杭钢</td>
+                            <td><span>备注</span></td>
+                            <td><a href="javascript:void(0);">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>20rMnTiH</td>
+                            <td>150</td>
+                            <td>2000</td>
+                            <td>杭钢</td>
+                            <td><span>备注</span></td>
+                            <td><a href="javascript:void(0);">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"><p>合计：<strong>0</strong>t</p></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <ul class="mat-input" id="mat_input">
+                        <li>
+                            <span>
+                                <em>*</em>采购钢种：
+                            </span>
+                            <div class="mat_list3">
+                                <input type="text" readonly="readonly" name="" placeholder="请输入采购钢种">
+                                <div>
+                                    <b>采购钢种1</b>
+                                    <b>采购钢种2</b>
+                                    <b>采购钢种3</b>
+                                    <b>采购钢种4</b>
+                                    <b>采购钢种5</b>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <span><em>*</em>采购规格：</span>
+                            <input type="text" maxlength="20" placeholder="请输入钢的规格">
+                        </li>
+                        <li>
+                            <span><em>*</em>采购数量：</span>
+                            <input type="text" maxlength="5" placeholder="请输入采购数量"><i>吨</i>
+                        </li>
+                        <li>
+                            <span><em>*</em>采购钢厂：</span>
+                            <div class="mat_list3">
+                                <input type="text" readonly="readonly" name="" placeholder="请输入采购钢厂">
+                                <div>
+                                    <b>采购钢厂1</b>
+                                    <b>采购钢厂2</b>
+                                    <b>采购钢厂3</b>
+                                    <b>采购钢厂4</b>
+                                    <b>采购钢厂5</b>
+                                    <b>采购钢厂1</b>
+                                    <b>采购钢厂2</b>
+                                    <b>采购钢厂3</b>
+                                    <b>采购钢厂4</b>
+                                    <b>采购钢厂5</b>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="bz">备注：</span>
+                            <textarea name="" maxlength="30"></textarea>
+                        </li>
+                    </ul>
+                    <div class="mat_a">
+                        <a href="javascript:void(0);" id="addTr">继续添加</a><br>
+                        <a href="javascript:void(0);" id="isTrue">确定</a>
+                    </div>
+                </div>
+                <div class="mat-con-c2">
+                    <div class="mat-con-hd mat-con-hd2">
+                        <h3>核对信息</h3><span>请核对如下联系人的信息，如有不符请重新编辑</span>
+                    </div>
+                    <ul class="mat-input" id="mat_input2">
+                        <li>
+                            <span><em>*</em>联系人：</span>
+                            <input type="text" value="" maxlength="10" placeholder="请输入联系人">
+                        </li>
+                        <li>
+                            <span><em>*</em>联系电话：</span>
+                            <input type="text" placeholder="请输入手机号" maxlength="11" value="15158891975">
+                        </li>
+                        <li>
+                            <span><em>*</em>公司名称：</span>
+                            <input type="text" placeholder="请输入公司名称" maxlength="30" value="杭州包昆特殊钢配送有限公司">
+                        </li>
+
+                        <li>
+                            <input type="submit" value="提交" id="mat_sub">
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://user.uhelper.cn/assets/js/plugins/layer/layer.js"></script>
+    <script src="js/materiel.js"></script>
+</body>
+</html>
