@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>集中采购</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="js/adaptation.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<section class="bg">
+    <header class="header">
+        <h3>钢厂直接团购，优惠的价格，稳定的质量，可依赖的品质</h3>
+        <p>免责声明</p>
+    </header>
+    <section class="buy_num">
+        <span>采购数量</span>
+        <strong>10358t</strong>
+        <p>评估时间：2017.01.11</p>
+    </section>
+    <div class="people_num">
+        参 与 人 数：0 0 8 9
+    </div>
+
+    <section class="list">
+        <div class="list-hd">
+            <h4 ontouchstart='window.location.href=""'>采购需求</h4>
+            <p>请填写你的采购需求，如果还有更多需求，可以新增。</p>
+        </div>
+        <form action="https://www.baidu.com" method="get">
+            
+            <div class="table-show">
+                <table class="table1" cellspacing="0" cellpadding="0">
+                    <thead>
+                    <tr>
+                        <th>钢种</th>
+                        <th>规格</th>
+                        <th>数量</th>
+                        <th>钢厂</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+                <div class="total">
+                    <p>合计：<i></i>吨</p>
+                </div>
+            </div>
+            <ul class="checked" id="checked">
+                <li>
+                    <span><em>*</em>采购钢种：</span>
+                    <select name="" id="" >
+                        <option value="">请输入钢的品种</option>
+                        <option value="钢种2">钢种2</option>
+                    </select>
+                </li>
+                <li>
+                    <span><em>*</em>采购规格：</span>
+                    <input type="number" name="" placeholder="请输入采购规格,只能是纯数字" />
+                </li>
+                <li>
+                    <span><em>*</em>采购数量：</span>
+                    <input type="number" name="" placeholder="请输入钢的数量" />
+                </li>
+                <li>
+                    <span>采购钢厂：</span>
+                    <select name="" id="" >
+                        <option value="">请选择以下钢厂</option>
+                        <option value="杭钢2">杭钢2</option>
+                    </select>
+                </li>
+                <li>
+                    <span><em style="color:#fff;">*</em>备注：</span>
+                    <input type="text" maxlength="100" name="" placeholder="请用简短文字输入你的描述" />
+                </li>
+            </ul>
+            <a href="javascript:void(0);" class="trueBtn">确定</a>
+            <a href="javascript:void(0);" class="addBtn">继续添加</a>
+            <div class="list-hd">
+                <h4>核对信息</h4>
+                <p>请核对如下联系人的信息，如有不符请重新编辑。</p>
+            </div>
+            <ul class="checked checked2">
+                <li>
+                    <span>联系人：</span>
+                    <input type="text" maxlength="10" name="" value="" placeholder="" />
+                </li>
+                <li>
+                    <span>联系电话：</span>
+                    <input type="number" maxlength="11" name="" value="" placeholder="" />
+                </li>
+                <li>
+                    <span>公司名称：</span>
+                    <input type="text" maxlength="30" name="" value="" placeholder="" />
+                </li>
+                <li>
+                    <input type="submit" class="submit" value="提交">
+                </li>
+            </ul>
+
+        </form>
+    </section>
+</section>
+
+<!--弹窗-->
+<div class="pop_wrap">
+    <section class="pop-ups">
+        <h4>温馨提示</h4>
+        <p class="pop_txt">有采购相同的钢种和规格，是否继续采购</p>
+        <div class="pop_btn" id="pop_btn">
+            <a href="javascript:void(0);" class="pop_true" style="width:50%;">确定</a><a href="javascript:void(0);" style="width:50%;border-left:1px solid #d7d4d4" class="">取消</a>
+        </div>
+    </section>
+</div>
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/wl.js"></script>
+
+</body>
+</html>
