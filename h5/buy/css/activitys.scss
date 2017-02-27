@@ -1,0 +1,49 @@
+@import "lib/reset";
+
+.activity_hd{
+  text-align: center;width:$baseRem*708rem;margin:$baseRem*30rem auto 0;
+  height:$baseRem*96rem;
+  a{border:$baseRem*3rem solid #feca4a;border-radius:$baseRem*18rem $baseRem*18rem 0 0;box-sizing:border-box;width:50%;
+    display: inline-block;height:$baseRem*96rem;
+    padding-top:$baseRem*15rem;
+    line-height:$baseRem*38rem;vertical-align: top;
+    background: #f98346;
+    color:#cc0905;
+    font-size:$baseRem*30rem;
+    span{color:#cc0905;
+      display: block;
+      line-height:$baseRem*28rem;
+      font-size:$baseRem*20rem;}
+    &.active{
+      background: #fff9eb;border-bottom-color:#fff9eb;color:#fa8246;
+      span{color:#fa8246;}
+    }
+  }
+}
+
+.activity_con{width:$baseRem*708rem;
+  text-align: center;
+  margin:0 auto $baseRem*12rem;
+  padding:$baseRem*40rem 0 $baseRem*20rem;
+  background: #fff9eb;
+  h4,p{color:#c73935;}
+  h4{
+
+    line-height:$baseRem*56rem;
+    font-size:$baseRem*48rem;}
+  p{
+    font-size:$baseRem*24rem;margin:$baseRem*13rem 0 $baseRem*15rem;
+    line-height:$baseRem*32rem;}
+  img{width:$baseRem*670rem;height:$baseRem*328rem;}
+  .activity_join{
+    display: block;}
+  .activity_join2{
+    width:$baseRem*298rem;
+    line-height:$baseRem*80rem;
+    display: block;margin:$baseRem*28rem auto 0;
+    background: #f1590e;color:#fff;border-radius:$baseRem*12rem;
+    font-size:$baseRem*28rem;
+  }
+  .activity_list{
+    display: none;}
+}

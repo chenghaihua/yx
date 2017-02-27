@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body style="height:3000px;">
+<div>下拉加载更多</div>
+<div class="main" style="height:700px;overflow:auto;">
+    <div class="child" style='border:1px solid red;margin-top:20px;color:grey;height:800px' ></div>
+</div>
+
+</body>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script  type="text/javascript">
+    $(document).ready(function(){
+        $("body").unbind("scroll").bind("scroll", function(e){
+            var sum = this.scrollHeight;
+            console.log(sum);
+            if (sum <= $(this).scrollTop() + $(this).height()) {
+                $(".main").append($(".child").clone());
+            }
+        });
+    });
+/*    $("input[type=radio]").each(function(index){
+        $(this).on("change",function(){
+           alert(index);
+        });
+    });
+
+    this.$seleBtn.each(function(index){
+        $(this).on("change",function(){
+            _self.$oContent.hide().eq(index).show();
+        });
+    });*/
+
+</script>
+</html>

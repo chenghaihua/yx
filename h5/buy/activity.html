@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>采购活动</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script>
+        var cssEl=document.createElement("style");
+        document.documentElement.firstElementChild.appendChild(cssEl);
+        var dpr=1;
+        var pxPerRem=document.documentElement.clientWidth*dpr/10;
+        if(pxPerRem>60){
+            pxPerRem=60;
+        }
+        cssEl.innerHTML='html{font-size:'+pxPerRem+'px!important;}';
+    </script>
+    <link rel="stylesheet" href="css/activitys.css">
+</head>
+<body style="background:#d82e00;">
+    <img src="pic/activity_pic.jpg" width="100%" alt="">
+    <section class="act_con">
+        <div class="activity_hd">
+            <a href="javascript:void(0);">
+                集中采购
+                <span>火热进行中</span>
+            </a><a href="javascript:void(0);">
+                物料展销
+                <span>火热进行中</span>
+            </a>
+        </div>
+        <div class="activity_con">
+            <div class="activity_list">
+                <a href="javascript:void(0);" data-url="<?php echo base_url('Cmateriel/purchase')?>" class="activity_join"><img src="pic/activity_pic3.jpg" alt=""></a>
+                <a href="javascript:void(0);" data-url="<?php echo base_url('Cmateriel/purchase')?>" class="activity_join activity_join2">点击进入</a>
+            </div>
+            <div class="activity_list">
+                <img src="pic/activity_pic2.jpg" alt="">
+                <a href="javascript:void(0);" data-url="<?php echo base_url('Cmateriel/sale')?>" class="activity_join activity_join2">点击进入</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+        (function(){
+            //var hostUrl='<?php echo base_url("Cmateriel")?>';
+            var uid=window.navigator.userAgent.split("uhelper")[1];
+
+            $(".activity_join").each(function(index){
+                $(this).on("click",function(){
+                    var _self=$(this);
+                    $.post(hostUrl+'/get_user',{"uid":uid},function(data){
+                        if(data.status){
+                            window.location.href=_self[0].dataset.url;
+                        }else{
+                            alert(data.msg);
+                        }
+                    },"json");
+                });
+            });
+
+
+            /*
+            * 切换
+            * */
+            var changeBox={
+                init:function(options){
+                    this.$btn=options.btn;
+                    this.$conList=options.conList;
+
+                    this.$btn.first().addClass("active");
+                    this.$conList.first().show();
+                    this.clickEvent();
+                },
+                clickEvent:function(){
+                    var _self=this;
+                    this.$btn.each(function(index){
+                        $(this).on("click",function(){
+                           $(this).addClass("active").siblings().removeClass("active");
+                            _self.$conList.hide().eq(index).show();
+                        });
+                    });
+                }
+            };
+            changeBox.init({
+                "btn":$(".activity_hd a"),
+                "conList":$(".activity_con .activity_list")
+            });
+        })();
+    </script>
+
+</body>
+</html>
